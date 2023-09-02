@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findkey(arr, key) {
+            return arr.includes(key);
+        }    
+            const A = [1, 2, 5, 4, 0];
+            const k1 = 4;
+            const B = [11, 22, 33, 44];
+            const k2 = 33;
+        
+
+            const resultA = findkey(A, k1);
+            const resultB = findkey(B, k2);
+
+            if(resultA){
+                console.log('key found in A')
+            } else{
+                console.log('Key not found in A')
+            }
+
+            if(resultB){
+                console.log('key found in B')
+            } else{
+                console.log('Key not found in B')
+            }
+        
+    </script>
+</body>
+
+</html>
