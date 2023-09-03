@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findDuplicates(arr) {
+            const uniqueValues = new Set();
+            const duplicates = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                const currentElement = arr[i];
+                if (uniqueValues.has(currentElement)) {
+                    duplicates.push(currentElement);
+                } else {
+                    uniqueValues.add(currentElement);
+                }
+            }
+
+            return duplicates;
+        }
+
+        const A = [0, 1, 2, 3, 4, 5, 0];
+        const B = [5, 4, 3, 2, 1, 0];
+
+        const duplicatesA = findDuplicates(A);
+        const duplicatesB = findDuplicates(B);
+
+        console.log("Duplicates in A:", [...new Set(duplicatesA)]); 
+        console.log("Duplicates in B:", [...new Set(duplicatesB)]); 
+
+
+    </script>
+</body>
+
+</html>

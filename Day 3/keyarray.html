@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function countOccurrences(arr, key) {
+            let count = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === key) {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
+        const A = [0, 1, 2, 3, 4, 5];
+        const B = [5, 4, 3, 2, 1, 0];
+        const key = 1;
+
+        const occurrencesA = countOccurrences(A, key);
+        const occurrencesB = countOccurrences(B, key);
+
+        console.log(`Occurrences of ${key} in A: ${occurrencesA}`); // Output: Occurrences of 1 in A: 1
+        console.log(`Occurrences of ${key} in B: ${occurrencesB}`); // Output: Occurrences of 1 in B: 1
+
+    </script>
+</body>
+
+</html>
