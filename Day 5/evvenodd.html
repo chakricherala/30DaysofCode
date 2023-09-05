@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findEvenAndOddNumbers(arr) {
+            const evenNumbers = [];
+            const oddNumbers = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 === 0) {
+                    evenNumbers.push(arr[i]);
+                } else {
+                    oddNumbers.push(arr[i]);
+                }
+            }
+
+            return {
+                even: evenNumbers,
+                odd: oddNumbers,
+            };
+        }
+
+        const A1 = [1, 2, 5, 4, 0];
+        const B1 = [1, 2, 5, 4, 0];
+        const A2 = [1, 2, 3, 4, 5];
+        const B2 = [11, 22, 33, 44];
+
+        const resultA1 = findEvenAndOddNumbers(A1);
+        const resultB1 = findEvenAndOddNumbers(B1);
+        const resultA2 = findEvenAndOddNumbers(A2);
+        const resultB2 = findEvenAndOddNumbers(B2);
+
+        console.log("Testcase 1 - Even numbers in A:", resultA1.even); 
+        console.log("Testcase 1 - Odd numbers in A:", resultA1.odd);   
+        console.log("Testcase 1 - Even numbers in B:", resultB1.even); 
+        console.log("Testcase 1 - Odd numbers in B:", resultB1.odd);   
+
+        console.log("Testcase 2 - Even numbers in A:", resultA2.even); 
+        console.log("Testcase 2 - Odd numbers in A:", resultA2.odd);   
+        console.log("Testcase 2 - Even numbers in B:", resultB2.even); 
+        console.log("Testcase 2 - Odd numbers in B:", resultB2.odd);   
+
+    </script>
+</body>
+
+</html>
