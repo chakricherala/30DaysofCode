@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findMissingNumbers(arr1, arr2) {
+            const missingNumbers = [];
+
+            for (let i = 0; i < arr1.length; i++) {
+                if (!arr2.includes(arr1[i])) {
+                    missingNumbers.push(arr1[i]);
+                }
+            }
+
+            return missingNumbers;
+        }
+
+        const A = [0, 1, 2, 6, 4, 5];
+        const B = [5, 4, 3, 2, 9, 0];
+
+        const missingNumbersA = findMissingNumbers(A, B);
+
+        console.log("Missing numbers in A:", missingNumbersA); 
+
+    </script>
+</body>
+
+</html>
