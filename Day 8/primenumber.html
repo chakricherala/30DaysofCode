@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Prime(num) {
+            if (num <= 1) {
+                return false;
+            }
+
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false; 
+                }
+            }
+
+            return true;
+        }
+
+        function PrimeInArray(arr) {
+            const primeNumbers = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                if (Prime(arr[i])) {
+                    primeNumbers.push(arr[i]);
+                }
+            }
+
+            return primeNumbers;
+        }
+
+        const A = [1, 2, 5, 4, 0];
+        const B = [1, 2, 3, 4, 5];
+
+        const primeNumbers1 = PrimeInArray(A);
+        const primeNumbers2 = PrimeInArray(B);
+
+        console.log(primeNumbers1);
+        console.log(primeNumbers2); 
+
+    </script>
+</body>
+
+</html>

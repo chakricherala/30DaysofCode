@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function productofarray(A,B) {
+
+            const C = A.concat(B);
+
+            let product = 1;
+            for (let i = 0; i < C.length; i++) {
+                product *= C[i];
+            }
+            return product;
+        }
+        const A = [ 1, 1, 1, 1, 1]
+        const B = [2, 2, 2, 2, 2]
+
+        const result = productofarray(A,B) 
+
+        console.log("product of array:",result)
+    </script>
+</body>
+
+</html>
