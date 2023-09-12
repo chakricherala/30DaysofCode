@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function duplicatearrays(arr1, arr2) {
+            const set1 = new Set(arr1);
+            const duplicates = [];
+
+            for (const num of arr2) {
+                if (set1.has(num)) {
+                    duplicates.push(num);
+                }
+            }
+
+            return duplicates;
+        }
+
+        const A = [0, 1, 2, 3, 4, 5];
+        const B = [5, 4, 3, 2, 1, 0];
+
+        const duplicates = duplicatearrays(A, B);
+
+        console.log(duplicates);
+
+    </script>
+</body>
+
+</html>
