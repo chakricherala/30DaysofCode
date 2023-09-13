@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findMiddleElementAfterMerge(arr1, arr2) {
+            const mergedArray = [...arr1, ...arr2];
+            const length = mergedArray.length;
+
+            if (length % 2 === 0) {
+                const middleIndex = length / 2 - 1;
+                return mergedArray[middleIndex];
+            } else {
+                const middleIndex = Math.floor(length / 2);
+                return mergedArray[middleIndex];
+            }
+        }
+
+        const A = [1, 2, 5, 4, 0];
+        const B = [1, 2, 3, 4, 5];
+
+        const middleElement = findMiddleElementAfterMerge(A, B);
+
+        console.log(middleElement); 
+
+    </script>
+</body>
+
+</html>
